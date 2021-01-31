@@ -1,0 +1,21 @@
+
+org 100h
+
+MOV SI, 0200H
+MOV CX, 7D
+MOV AX, 0001H
+MOV DX, 0000H
+
+back: 
+MUL CX
+DEC CX
+JNZ back
+
+MOV [SI],AX
+
+
+ret
+
+
+
+
