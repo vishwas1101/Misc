@@ -1,0 +1,25 @@
+
+org 100h
+
+MOV SI, 4000H
+MOV CL, 7H
+MOV CH, 00H
+MOV DI, 4007H       
+
+L1: 
+MOV AL,[SI]
+MOV BL,[DI]
+XCHG [SI],BL
+XCHG [DI],AL
+INC SI
+DEC DI
+INC CH
+DEC CL
+CMP CL,CH
+JGE L1
+
+
+INT 21H
+ret
+
+

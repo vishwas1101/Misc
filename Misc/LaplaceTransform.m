@@ -1,19 +1,20 @@
+clc
+clear
+
 syms t a w s tau neu;
 
-%generate laplace tranforms
-f = exp(a*t)*sin(w*t);     %Enter your t domain expression
-F = laplace(f);
-disp(F);
+% %generate laplace tranforms
+% x1 = t^2 - 2*t;     %Enter your t domain expression
+% X1 = simplify(laplace(x1));
+% disp(simplify(X1));
+% 
+% x2 = t;
+% X2 = laplace(x2);
+% disp(simplify(X2));
+% 
+% % convolved_x = conv(x1, x2);
 
-%generate inv laplace tranforms
-G = 1/(s^2 + 1);           %Enter your s domain expression
-g = ilaplace(G);
-disp(g);
+Y = 2/(s*(s+1)*(s+2));
+y = ilaplace(Y);
+disp(simplify(y));
 
-
-%generate partial fractions 
-a = [1 6 11 6];            %Denominator polynomial coeffecients          
-b = [5 3];                 %Numerator polynomial coeffecients 
-
-[r,p,k] = residue(b,a);
-disp([r p k]);

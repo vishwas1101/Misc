@@ -1,0 +1,16 @@
+org 100h
+        
+MOV SI, 3000H
+MOV DI, 2004H
+MOV CX, 0005H    
+
+L1: 
+CLD
+LODSB
+STD
+STOSB
+LOOP L1
+
+INT 21H
+
+ret

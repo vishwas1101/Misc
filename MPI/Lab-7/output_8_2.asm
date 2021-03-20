@@ -1,0 +1,19 @@
+
+org 100h
+        
+MOV AH, 01H
+INT 21H    
+
+MOV AH, 02H  
+INC AL 
+MOV DL, AL
+INT 21H
+INC AL
+MOV DL, AL
+INT 21H
+
+ret
+
+
+
+
