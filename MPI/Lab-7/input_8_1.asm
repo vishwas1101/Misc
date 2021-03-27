@@ -1,7 +1,7 @@
 
 ORG 100H
     
-; 8.1 Ans: The value is stored in Hexadecimel  
+; 8.1 Ans: The value is stored in ASCII  
 
      
 MOV AH, 01H    
